@@ -1,1 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darshit Traders - Grocery Store</title>
+    <style>
+        /* General Styles */
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f9f9f9; color: #333; }
+        a { text-decoration: none; color: inherit; }
+        .container { width: 85%; margin: auto; max-width: 1200px; }
+        .btn { padding: 12px 25px; border-radius: 5px; font-weight: bold; display: inline-block; }
+        .btn-green { background: #007A33; color: white; }
+        .btn-orange { background: #FF6600; color: white; }
+        
+        /* Header & Nav */
+        header { background: #0A2240; color: white; padding: 15px 0; position: sticky; top: 0; z-index: 1000; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 26px; font-weight: bold; color: #FF6600; }
+        .logo span { color: #007A33; }
+        nav a { margin-left: 20px; font-size: 15px; text-transform: uppercase; color: #fff; transition: color 0.3s; }
+        nav a:hover { color: #FF6600; }
+        
+        /* Hero Section */
+        .hero { background: linear-gradient(135deg, #0A2240 50%, #f4f4f4 50%); padding: 80px 0; color: white; }
+        .hero-content { width: 50%; }
+        .hero h1 { font-size: 48px; color: #FF6600; margin-bottom: 10px; }
+        .hero h2 { font-size: 26px; color: #fff; margin-bottom: 15px; }
+        .hero p { color: #ccc; margin-bottom: 30px; line-height: 1.6; }
+        .hero .buttons .btn { margin-right: 15px; }
 
+        /* Section Headings */
+        .section-title { text-align: center; margin: 60px 0 40px; font-size: 32px; color: #0A2240; position: relative; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 3px; background: #FF6600; margin: 10px auto 0; }
+
+        /* About/Features Grid */
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center; }
+        .card h3 { color: #007A33; margin-bottom: 10px; }
+
+        /* Products Grid */
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .product-card { background: white; border-radius: 8px; overflow: hidden; text-align: center; padding-bottom: 20px; border: 1px solid #eee; transition: transform 0.3s; }
+        .product-card:hover { transform: translateY(-5px); }
+        .product-img { height: 150px; background: #eee; display: flex; align-items: center; justify-content: center; color: #888; margin-bottom: 15px; font-size: 14px; }
+        .product-card h3 { font-size: 18px; color: #0A2240; }
+
+        /* Why Choose Us */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; background: #0A2240; padding: 50px; border-radius: 8px; color: white; }
+        .feature-item h3 { color: #FF6600; margin-bottom: 8px; }
+        .feature-item p { font-size: 14px; color: #ccc; }
+
+        /* Contact Section */
+        .contact-box { background: #fff; padding: 30px; border-radius: 8px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .contact-box h3 { color: #0A2240; margin-bottom: 10px; }
+
+        /* Footer */
+        footer { background: #051424; color: #bbb; padding: 50px 0 20px; margin-top: 60px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 30px; }
+        .footer-col h3 { color: #fff; margin-bottom: 15px; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-bottom { border-top: 1px solid #112; padding-top: 20px; text-align: center; font-size: 14px; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content { width: 100%; text-align: center; }
+            .hero { background: #0A2240; }
+            .nav-container { flex-direction: column; }
+            nav { margin-top: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">DARSHIT <span>TRADERS</span></div>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#products">Products</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>DARSHIT TRADERS</h1>
+                <h2>GROCERY RETAIL & WHOLESALE</h2>
+                <p>Your trusted partner for fresh quality groceries, pulses, and spices. Serving you with the best prices in Rajkot.</p>
+                <div class="buttons">
+                    <a href="#products" class="btn btn-green">View Products</a>
+                    <a href="tel:9033466460" class="btn btn-orange">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+        <h2 class="section-title">ABOUT US</h2>
+        <div class="grid-3">
+            <div class="card"><h3>Quality Guarantee</h3><p>We provide only the best and fresh products.</p></div>
+            <div class="card"><h3>Wholesale & Retail</h3><p>Serving households and businesses alike.</p></div>
+            <div class="card"><h3>Fast Service</h3><p>Quick supply to ensure you never run out.</p></div>
+        </div>
+    </section>
+
+    <!-- Our Products Section -->
+    <section id="products" class="container">
+        <h2 class="section-title">OUR PRODUCTS</h2>
+        <div class="product-grid">
+            <div class="product-card"><div class="product-img">Image Placeholder</div><h3>Pulses & Grains</h3></div>
+            <div class="product-card"><div class="product-img">Image Placeholder</div><h3>Spices & Masalas</h3></div>
+            <div class="product-card"><div class="product-img">Image Placeholder</div><h3>Tea & Coffee</h3></div>
+            <div class="product-card"><div class="product-img">Image Placeholder</div><h3>Edible Oils</h3></div>
+            <div class="product-card"><div class="product-img">Image Placeholder</div><h3>Flours</h3></div>
+            <div class="product-card"><div class="product-img">Image Placeholder</div><h3>Dry Fruits</h3></div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="container">
+        <h2 class="section-title">WHY CHOOSE US</h2>
+        <div class="features-grid">
+            <div class="feature-item"><h3>Best Quality</h3><p>100% Quality Assurance.</p></div>
+            <div class="feature-item"><h3>Best Price</h3><p>Wholesale rates available.</p></div>
+            <div class="feature-item"><h3>Large Range</h3><p>Everything you need.</p></div>
+            <div class="feature-item"><h3>Trusted</h3><p>Years of experience.</p></div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="container">
+        <h2 class="section-title">CONTACT US</h2>
+        <div class="grid-3">
+            <div class="contact-box"><h3>📞 CALL</h3><p>90334 66460</p></div>
+            <div class="contact-box"><h3>📍 ADDRESS</h3><p>116/117 Swaminarayan Complex, Rajkot</p></div>
+            <div class="contact-box"><h3>⏰ TIMING</h3><p>9:00 AM - 9:00 PM</p></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col"><h3>Darshit Traders</h3><p>Premium Quality Grocery Supplier in Rajkot.</p></div>
+            <div class="footer-col"><h3>Quick Links</h3><ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li></ul></div>
+            <div class="footer-col"><h3>Contact</h3><p>📞 90334 66460</p></div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Darshit Traders. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
